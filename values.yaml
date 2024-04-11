@@ -1,5 +1,5 @@
 namespace:
   install: open-cluster-management
   target: acm
-channel: stable
+channel: release-2.10
 installPlanApproval: Automatic
