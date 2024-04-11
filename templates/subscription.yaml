@@ -12,4 +12,4 @@ spec:
   name: advanced-cluster-management
   channel: {{ .channel }}
   installPlanApproval: {{ .installPlanApproval}}
-{{ end }}
+{{- end }}
