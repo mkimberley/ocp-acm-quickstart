@@ -4,4 +4,6 @@ kind: MultiClusterHub
 metadata:
   name: multiclusterhub
   namespace: {{ .namespace.install }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 {{ end }}
