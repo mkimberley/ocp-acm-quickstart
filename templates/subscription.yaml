@@ -1,0 +1,16 @@
+{{ with .Values }}
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: acm-operator-subscription
+  namespace: {{ .namespace.install }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  name: advanced-cluster-management
+  #startingCSV: kubevirt-hyperconverged-operator.v4.14.1 2
+  channel: {{ .channel }}
+  installPlanApproval: {{ .installPlanApproval}}
+{{ end }}

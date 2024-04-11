@@ -1,0 +1,12 @@
+{{ with .Values }}
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: kubevirt-hyperconverged-group
+  namespace: {{ .namespace.install }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  targetNamespaces:
+    - {{ .namespace.target }}
+{{ end }}
