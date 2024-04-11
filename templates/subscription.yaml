@@ -10,7 +10,6 @@ spec:
   source: redhat-operators
   sourceNamespace: openshift-marketplace
   name: advanced-cluster-management
-  #startingCSV: kubevirt-hyperconverged-operator.v4.14.1 2
   channel: {{ .channel }}
   installPlanApproval: {{ .installPlanApproval}}
 {{ end }}
