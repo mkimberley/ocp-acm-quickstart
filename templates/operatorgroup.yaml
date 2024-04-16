@@ -8,5 +8,6 @@ metadata:
     argocd.argoproj.io/sync-wave: "2"
 spec:
   targetNamespaces:
-    - {{ .namespace.target }}
+    - {{ .namespace.install }}
+  upgradeStrategy: Default
 {{- end }}
