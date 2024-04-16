@@ -1,4 +1,7 @@
+hypershift:
+  enabled: true
 namespace:
   install: open-cluster-management
+  hyper-shift: local-cluster
 channel: release-2.10
 installPlanApproval: Automatic
